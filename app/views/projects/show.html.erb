@@ -2,4 +2,8 @@
 <h1><%= @project.title %></h1>
 <em><%= @project.subtitle %></em>
 <p><%= @project.body %></p>
+<h2>Technologies used:</h2>
+<% @project.technologies.each do |technology| %>
+<p><%= technology.name %></p>
+<% end %>
 <%= link_to  "Edit", edit_project_path(@project) %>
